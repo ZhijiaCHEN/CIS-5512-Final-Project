@@ -1,6 +1,6 @@
 CFLAGS = -O3
-OBJS =-L ../../obj -lsng
-INC =-I ../../include
+OBJS =-L ../../obj -lsng -L../../mysql-connector/lib -lmysqlclient
+INC =-I ../../include -I../../mysql-connector/include 
 #SIZE = $(MAT_SIZE)
 
 all: nxdr matrix
