@@ -93,6 +93,7 @@ CREATE TABLE `ScalabilityLog` (
   `Size` float DEFAULT NULL,
   `LoopOrder` varchar(45) DEFAULT NULL,
   `ElapsedTime` float DEFAULT NULL,
+  `MFLOPS` float DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
