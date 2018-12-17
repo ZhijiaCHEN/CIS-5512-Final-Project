@@ -1,11 +1,16 @@
 # mmaster usage
-This program relies on mysqlclient library. To run mmaster in our tsh shell, please execute following command before you start the tsh program:
+
+This program relies on mysqlclient shared library. You will need to export the LD_LIBRARY_PATH to run the program since the mysqlclient library is not placed in system's shared library path. You can use the following command: 
 
 `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:path/to/libmysqlclient`
 
 For example, I placed the library at the path: `/home/zhijia/git/assignments/Operating\ Systems/lab4/php/mysql-connector/lib`, so the export command for me is:
 
 `export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/zhijia/git/assignments/Operating\ Systems/lab4/php/mysql-connector/lib`
+
+__Note__: To run mmaster in our tsh shell, please execute the export command before you start the tsh (if you ask the shell to run the mmaster in another terminal session, the shell would not know where the library is, as the export command is only effective for each session).
+
+And also run the updated [final.sql](https://github.com/ZhijiaCHEN/CIS-5512-Final-Project/blob/master/final/sql/final.sql) in your database.
 
 The mmaster asks for 7 arguments: 
 
